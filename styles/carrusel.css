@@ -1,0 +1,20 @@
+.content {
+  height: auto;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+img {
+  border-radius: 5px;
+  border: solid 5px black;
+  box-shadow: 0px 0px 20px 2px black;
+}
+
+button {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: none;
+  background-color: transparent;
+}
