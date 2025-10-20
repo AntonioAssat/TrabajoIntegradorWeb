@@ -34,6 +34,12 @@ $form.addEventListener('submit', (evt) => {
     $form.style.display = 'none';
   } catch (err) {
     $div_error.style.display = 'flex';
-    $span_error.textContent = err.message;
+    $span_error.textContent = '';
+
+    const capturaError = document.createElement('p');
+    capturaError.className = 'mensaje‐error';  
+    capturaError.textContent = err.message;    
+
+    $span_error.appendChild(capturaError);
   }
 });
