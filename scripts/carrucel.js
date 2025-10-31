@@ -18,15 +18,15 @@ $img.alt = `creatina`;
 
 $btn_back.addEventListener('click', () => {
   // operador ternario '?'
-  count = (count === 0) ? 4 : count - 1; 
-
+  //count = (count === 0) ? 4 : count - 1; 
+  count = --count % images.length;
   $img.src = `./public/image/${images[count]}.webp`;
   $img.alt = images[count];
 });
 
 $btn_next.addEventListener('click', () => {
-  count = (count === 4) ? 0 : count + 1;
-
+  //count = (count === 4) ? 0 : count + 1;
+  count = ++count % images.length
   $img.src = `./public/image/${images[count]}.webp`;
   $img.alt = images[count];
 });
