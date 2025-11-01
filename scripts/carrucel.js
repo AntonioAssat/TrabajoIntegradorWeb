@@ -19,7 +19,8 @@ $img.alt = `creatina`;
 $btn_back.addEventListener('click', () => {
   // operador ternario '?'
   //count = (count === 0) ? 4 : count - 1; 
-  count = --count % images.length;
+ // count = --count % images.length;
+  count = (count - 1 + images.length) % images.length;
   $img.src = `./public/image/${images[count]}.webp`;
   $img.alt = images[count];
 });

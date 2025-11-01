@@ -55,7 +55,7 @@ export default class Usuario {
   #setContacto(contacto) {
     const noLetras = /^\d+$/.test(contacto);
     const longitud = contacto.length === 10;
-    const estaVacio = mail === '';
+    const estaVacio = contacto === '';
 
     if (estaVacio) throw new Error('El contacto no puede estar vacio.');
 
