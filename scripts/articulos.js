@@ -29,6 +29,48 @@ const productos = [
     descripcion: "Refuerza tu sistema inmune y mejora el bienestar general.",
     precio: "$15.000",
     imagen: "../public/image/vitamina.webp"
+  },
+  {
+    nombre: "BCAA StarNutricion",
+    descripcion: "Aminoácidos esenciales para la recuperación muscular.",
+    precio: "$25.000",
+    imagen: "../public/image/bcaastar.webp"
+  },
+  {
+    nombre: "Colageno ENA",
+    descripcion: "Mejora la salud de la piel, articulaciones y huesos.",
+    precio: "$28.000",
+    imagen: "../public/image/colagenoena.webp"
+  },
+  {
+    nombre: "Creatina ENA 1Kg",
+    descripcion: "Aumenta la fuerza y el rendimiento físico.",
+    precio: "$60.000",
+    imagen: "../public/image/creatinaena1kg.webp"
+  },
+  {
+    nombre: "Creatina Star",
+    descripcion: "Mejora la fuerza y resistencia durante el entrenamiento.", 
+    precio: "$35.000",
+    imagen: "../public/image/creatinastar.webp"
+  },
+  {
+    nombre: "Multivitaminico Star",
+    descripcion: "Complejo vitamínico para el bienestar diario.",
+    precio: "$20.000",
+    imagen: "../public/image/multivitaminicostar.webp"
+  },
+  {
+    nombre: "Pre Entreno C4",
+    descripcion: "Aumenta la energía y concentración antes del entrenamiento.",
+    precio: "$50.000",
+    imagen: "../public/image/prec4.webp"
+  },
+  {
+    nombre: "Pre Entreno Gold",
+    descripcion: "Mejora el rendimiento y la resistencia durante el ejercicio.",
+    precio: "$45.000",
+    imagen: "../public/image/pregold.webp"
   }
 ];
 

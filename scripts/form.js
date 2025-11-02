@@ -1,34 +1,41 @@
-import Usuario from './Usuario.js'
+import Usuario from './Usuario.js';
 
-const $ = (selector) => document.querySelector(selector);
+const $ = selector => document.querySelector(selector);
 
-const $form = $('form');
-const $resultado = $('.resultado');
-
-const $nombre = $('.nombre');
-const $apellido = $('.apellido');
-const $mail = $('.mail');
-const $contacto = $('.contacto');
-
+const $form      = $('form');
 const $div_error = $('.error');
-const $span_error = $div_error.querySelector('span');
+const $span_error= $div_error.querySelector('span');
 
-$form.addEventListener('submit', (evt) => {
+// Preparar un contenedor dinámico para los resultados — lo crearemos al primer envío válido
+let $resultado = null;
+
+$form.addEventListener('submit', evt => {
   evt.preventDefault();
 
-// Limpiar errores previos
+  // Limpiar mensaje de error previo
   $span_error.textContent = '';
   $div_error.style.display = 'none';
 
-  const nombre = $form.querySelector('#nombre').value;
-  const apellido = $form.querySelector('#apellido').value;
-  const mail = $form.querySelector('#mail').value;
-  const contacto = $form.querySelector('#contacto').value;
+  const nombre   = $form.querySelector('#nombre').value.trim();
+  const apellido = $form.querySelector('#apellido').value.trim();
+  const mail     = $form.querySelector('#mail').value.trim();
+  const contacto = $form.querySelector('#contacto').value.trim();
 
   try {
-   const usuario = new Usuario(nombre, apellido, mail, contacto);
+    const usuario = new Usuario(nombre, apellido, mail, contacto);
 
-    // Uso del createElement para mostrar el resultado si esta bien el formulario
+    // Si aún no hemos creado el contenedor resultado, lo creamos
+    if (!$resultado) {
+      $resultado = document.createElement('div');
+      $resultado.className = 'resultado';
+      // lo añadimos al DOM — por ejemplo justo después del formulario
+      $form.parentNode.insertBefore($resultado, $form.nextSibling);
+    }
+
+    // Vaciar contenedor resultado para mostrar sólo este envío (o comentar la línea para acumular)
+    $resultado.innerHTML = '';
+
+    // Crear los párrafos dinámicos
     const pNombre   = document.createElement('p');
     pNombre.textContent   = `Nombre: ${usuario.nombre}`;
     const pApellido = document.createElement('p');
@@ -38,29 +45,25 @@ $form.addEventListener('submit', (evt) => {
     const pContacto = document.createElement('p');
     pContacto.textContent = `Contacto: ${usuario.contacto}`;
 
-    // Vacio del contenido de los campos
-    $resultado.innerHTML = '';
-    // Parrafos abajo de los datos del usuario ya registrado
+    // Añadir los párrafos al contenedor
     $resultado.appendChild(pNombre);
     $resultado.appendChild(pApellido);
     $resultado.appendChild(pMail);
     $resultado.appendChild(pContacto);
 
-    //Como se muestra el resultado
+    // Mostrar el contenedor (en caso que esté oculto vía CSS)
     $resultado.style.display = 'block';
 
-    // Limpio el formulario para otro ingreso de datos
-    $form.reset(); 
-
-    
+    // Limpiar el formulario para otro uso
+    $form.reset();
 
   } catch (err) {
+    // Mostrar error
     $div_error.style.display = 'flex';
-    $span_error.textContent = '';
 
     const capturaError = document.createElement('p');
-    capturaError.className = 'mensaje‐error';  
-    capturaError.textContent = err.message;    
+    capturaError.className   = 'mensaje-error';
+    capturaError.textContent = err.message;
 
     $span_error.appendChild(capturaError);
   }
