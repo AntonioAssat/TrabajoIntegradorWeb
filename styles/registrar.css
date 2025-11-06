@@ -76,3 +76,25 @@ form {
   margin-right: 8px;
   vertical-align: middle;
 }
+/* Estilos para la sección introductoria */
+.registration-intro {
+  background-color: #f9f9f9; /* fondo suave */
+  padding: 2rem 1rem;
+  text-align: center;
+  margin: 0 auto 30px auto;
+  max-width: 500px;
+  color: #333;
+  border-radius: 10px;
+}
+
+.registration-intro h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #007BFF;
+}
+
+.registration-intro p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
