@@ -40,9 +40,9 @@ main {
   align-items: center;
   justify-content: center;
 }
-/* Estilos para el pie de página */
+/*pie de página */
 .site-footer {
-  background-color: #f0f0f0;      /* gris claro */
+  background-color: #f0f0f0;      
   color: #333;
   padding: 20px 0;
   text-align: center;
@@ -62,7 +62,7 @@ main {
 }
 
 .site-footer .footer-nav a {
-  color: #007BFF;                /* azul para enlaces */
+  color: #007BFF;                
   text-decoration: none;
   margin: 0 8px;
 }
@@ -80,9 +80,9 @@ main {
   font-size: 0.8rem;
   color: #666;
 }
-/*Estilo para informacion de la pagina*/
+/*para informacion de la pagina*/
 .about-us {
-  background-color: #f2f2f2;      /* gris claro */
+  background-color: #f2f2f2;      
   color: #333;
   padding: 40px 20px;
   text-align: center;
@@ -109,7 +109,7 @@ main {
   padding: 12px 24px;
   font-size: 1.1rem;
   color: #fff;
-  background-color: #007BFF;     /* azul */
+  background-color: #007BFF;     
   text-decoration: none;
   border-radius: 6px;
   transition: background-color 0.3s ease;

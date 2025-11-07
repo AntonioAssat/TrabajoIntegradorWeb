@@ -1,10 +1,10 @@
 .content {
   padding: 30px;
   border-radius: 10px;
-  background-color: #f2f2f2;   /* gris claro */
-  color: #333;                  /* texto oscuro para contraste */
-  max-width: 500px;             /* un poco más ancho */
-  margin: 40px auto;            /* centrado con margen superior */
+  background-color: #f2f2f2;   
+  color: #333;                  
+  max-width: 500px;             
+  margin: 40px auto;           
 }
 
 form {
@@ -35,9 +35,9 @@ form {
 
 .input-button input[type="submit"] {
   padding: 12px 20px;
-  width: 200px;                /* botón más grande */
+  width: 200px;                
   font-size: 1.1rem;
-  background-color: #007BFF;   /* azul estándar */
+  background-color: #007BFF;   
   color: #fff;
   border: none;
   border-radius: 6px;
@@ -51,7 +51,7 @@ form {
 
 .error {
   display: none;
-  color: #d9534f;               /* rojo-intenso para error */
+  color: #d9534f;               
   font-size: 0.9rem;
   text-align: center;
 }
@@ -76,9 +76,9 @@ form {
   margin-right: 8px;
   vertical-align: middle;
 }
-/* Estilos para la sección introductoria */
+/* Parte introductoria */
 .registration-intro {
-  background-color: #f9f9f9; /* fondo suave */
+  background-color: #f9f9f9; 
   padding: 2rem 1rem;
   text-align: center;
   margin: 0 auto 30px auto;

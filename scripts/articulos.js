@@ -1,4 +1,4 @@
-// ======== Datos de los productos ========
+// Arreglo de los productos
 const productos = [
   {
     nombre: "Creatina ENA",
@@ -77,7 +77,8 @@ const productos = [
 // Muestra los productos 
 function mostrarProductos(lista) {
   const contenedor = document.getElementById("contenedor-productos");
-  contenedor.innerHTML = ""; // Limpia antes de mostrar
+  // Limpia antes de mostrar
+  contenedor.innerHTML = ""; 
 
   lista.forEach(prod => {
     const card = document.createElement("div");
@@ -105,9 +106,9 @@ function filtrarProductos() {
   mostrarProductos(filtrados);
 }
 
-//Eventos 
+//Evento del buscador
 document.addEventListener("DOMContentLoaded", () => {
-  // Mostrar todos los productos al cargar la página
+  // Mostrar todos los productos al inicio
   mostrarProductos(productos);
 
   //Activar búsqueda en tiempo real
